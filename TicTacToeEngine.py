@@ -33,11 +33,10 @@ class TicTacToeEngine:
 
             numpy.set_printoptions(precision=3)
 
-            # The game_plays list holds all the moves for a single game in a list in the order
-            # in which they were played. __print_game_plays will display the board states for
-            # all the moves.
-            self.__print_game_plays(game_plays)
-            print("The winner was {0}!".format(winner))
+            if winner == 0:
+                print('The game was a tie.')
+            else:
+                print("The winner was {0}!".format(winner))
             total = self.total_x_wins + self.total_o_wins + self.total_ties
             print('% x wins: {0}, % o wins: {1}, % ties: {2}'.format(self.total_x_wins/total, self.total_o_wins/total, self.total_ties/total))
             response = input('Play again? (y/n) ')
