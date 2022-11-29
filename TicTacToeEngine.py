@@ -23,7 +23,7 @@ class TicTacToeEngine(TicTacToeBoard):
         # Play a bunch of games...
         while response != 'n':
             # Play!
-            self.__play_single_game()
+            (winner, game_plays) = self.__play_single_game()
             if (winner == 1):
                 self.total_x_wins += 1
             elif (winner == 2):
@@ -56,7 +56,12 @@ class TicTacToeEngine(TicTacToeBoard):
         # The game_plays list holds all the moves for a single game in a list in the order
         # in which they were played. __print_game_plays will display the board states for
         # all the moves.
+<<<<<<< Updated upstream
         #__print_game_plays(game_plays)
+=======
+        self.__print_game_plays(game_plays)
+
+>>>>>>> Stashed changes
         while (not single_game_is_done):
             # The player variable oscillates between 1 and 2. 1 represents X's. 2 represents O's.
             for player in range(1,3):
