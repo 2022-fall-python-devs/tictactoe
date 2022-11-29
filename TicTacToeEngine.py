@@ -3,15 +3,15 @@ from TicTacToeBoard import *
 
 
 # A class that plays many games of tic-tac-toe.
-class TicTacToeEngine:
+class TicTacToeEngine(TicTacToeBoard):
 
     NUM_SQUARES = 9 # Number of squares on a tic-tac-toe board.
 
     def start(self):
         self.__board = TicTacToeBoard()
         # Create the board.
-        self.clear_board()
 
+        self.clear_board()
         self.total_x_wins = 0.0
         self.total_o_wins = 0.0
         self.total_ties = 0.0
@@ -56,7 +56,7 @@ class TicTacToeEngine:
         # The game_plays list holds all the moves for a single game in a list in the order
         # in which they were played. __print_game_plays will display the board states for
         # all the moves.
-        __print_game_plays(game_plays)
+        #__print_game_plays(game_plays)
         while (not single_game_is_done):
             # The player variable oscillates between 1 and 2. 1 represents X's. 2 represents O's.
             for player in range(1,3):
