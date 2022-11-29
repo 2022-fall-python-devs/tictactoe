@@ -56,7 +56,8 @@ class TicTacToeEngine(TicTacToeBoard):
         # The game_plays list holds all the moves for a single game in a list in the order
         # in which they were played. __print_game_plays will display the board states for
         # all the moves.
-        #__print_game_plays(game_plays)
+        self.__print_game_plays(game_plays)
+        # dsomehthdllld
         while (not single_game_is_done):
             # The player variable oscillates between 1 and 2. 1 represents X's. 2 represents O's.
             for player in range(1,3):
