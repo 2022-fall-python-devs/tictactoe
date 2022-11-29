@@ -1,4 +1,4 @@
-class TicTacToeBoard:
+class TicTacToeBoard():
 
 
     def __init__(self):
@@ -9,7 +9,7 @@ class TicTacToeBoard:
         self.__squares = [0] * 9
 
 
-    def set_square(next_play, player):
+    def set_square(self, next_play, player):
         self.__squares[next_play] = player
 
 

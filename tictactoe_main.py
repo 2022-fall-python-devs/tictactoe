@@ -1,4 +1,5 @@
-import TicTacToeEngine
+from TicTacToeEngine import *
+from TicTacToeBoard import *
 
 
 def main():
