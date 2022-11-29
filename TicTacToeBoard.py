@@ -1,4 +1,4 @@
-class TicTacToeBoard:
+class TicTacToeBoard():
 
 
     def __init__(self):
