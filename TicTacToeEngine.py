@@ -17,13 +17,14 @@ class TicTacToeEngine(TicTacToeBoard):
         self.total_ties = 0.0
 
         response = 'y'
-        winner = 0
+        # winner = 0 -- Assigning 0 to winner in this spot always resulted in a tie
         game_plays = []
 
         # Play a bunch of games...
         while response != 'n':
             # Play!
             self.__play_single_game()
+            winner = self.winner #moved winner = 0 to below the __play_single_game()
             if (winner == 1):
                 self.total_x_wins += 1
             elif (winner == 2):
@@ -85,10 +86,10 @@ class TicTacToeEngine(TicTacToeBoard):
                     single_game_is_done = (num_plays == 9)
 
                     if (self.__board.check_for_win(player) == True):
-                        winner = player
+                        self.winner = player # Changed winner to self.winner
                         single_game_is_done = True
 
-        return (winner, game_plays)
+        return (self.winner, game_plays) #changed winner to self.winner
 
 
     def __get_square_marker(self, square):
